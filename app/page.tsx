@@ -297,28 +297,31 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          {/* Portrait Placeholder + Architectural Atmosphere Split */}
+          {/* Executive Portrait + Architectural Atmosphere Split */}
           <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-            <div
-              className="md:col-span-5 bg-[var(--bg)] p-8 md:p-10 flex flex-col justify-between min-h-[340px]"
+            <figure
+              className="md:col-span-5 bg-[var(--bg)] flex flex-col justify-between overflow-clip"
               data-reveal
             >
-              <div className="py-10 px-6 bg-[var(--surface-alt)] flex flex-col items-center justify-center text-center">
-                <p className="t-lead text-[var(--accent)]">
-                  Pragnesh Shah · Portrait Frame
-                </p>
-                <p className="mt-3 t-body text-[var(--ink)]">
-                  Profile Photo Placeholder
-                </p>
-                <p className="mt-2 t-small text-[var(--muted)]">
-                  Drop profile.jpg inside the public folder anytime to display your portrait here.
-                </p>
+              <div className="overflow-clip aspect-square w-full bg-[var(--surface-alt)]">
+                <img
+                  src="/profile.jpg"
+                  alt="Pragnesh Shah — Founder of Sehaaonline and General Manager at Neoshine Healthcare"
+                  width={1024}
+                  height={1024}
+                  fetchPriority="high"
+                  className="w-full h-full object-cover object-top photo-drift"
+                />
               </div>
-
-              <p className="mt-6 t-small text-[var(--muted)]">
-                Founder @ sehaaonline.com · General Manager @ Neoshine Healthcare
-              </p>
-            </div>
+              <figcaption className="p-6 md:p-8 flex flex-col gap-1">
+                <p className="t-lead text-[var(--ink)]">
+                  Pragnesh Shah
+                </p>
+                <p className="t-small text-[var(--muted)]">
+                  Founder @ sehaaonline.com · General Manager @ Neoshine Healthcare
+                </p>
+              </figcaption>
+            </figure>
 
             <div className="md:col-span-7 overflow-clip bg-[var(--bg)]" data-reveal style={{ ["--delay" as string]: "100ms" }}>
               <img
