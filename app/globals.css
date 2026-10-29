@@ -15,7 +15,7 @@
   --size-body: 18px;
   --size-lead: clamp(20px, 2vw, 24px);
   --size-head: clamp(32px, 4vw, 56px);
-  --size-display: clamp(64px, 14vw, 196px);
+  --size-display: clamp(56px, 9.8vw, 144px);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);

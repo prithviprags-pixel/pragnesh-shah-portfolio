@@ -190,28 +190,31 @@ export default function PortfolioPage() {
       </header>
 
       <main id="top">
-        {/* HERO — Stacked Name, Two Inks */}
-        <section className="page-pad pt-6 pb-16 lg:min-h-[calc(88svh-68px)] flex flex-col justify-between gap-12 bg-[var(--bg)]">
-          <div className="w-full">
-            <h1
-              className="lines t-display font-medium"
-              aria-label="Pragnesh Shah — Healthcare Strategy & Venture Builder"
-            >
-              <span className="line">
-                <span data-line style={{ ["--i" as string]: 0 }} className="text-[var(--ink)]">
-                  Pragnesh
+        {/* HERO — Stacked Name + Executive Portrait Side-by-Side */}
+        <section className="page-pad pt-6 pb-16 lg:min-h-[calc(88svh-68px)] grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-center bg-[var(--bg)]">
+          <div className="md:col-span-7 flex flex-col justify-between gap-10">
+            <div>
+              <h1
+                className="lines t-display font-medium"
+                aria-label="Pragnesh Shah — Healthcare Strategy & Venture Builder"
+              >
+                <span className="line">
+                  <span data-line style={{ ["--i" as string]: 0 }} className="text-[var(--ink)]">
+                    Pragnesh
+                  </span>
                 </span>
-              </span>
-              <span className="line">
-                <span data-line style={{ ["--i" as string]: 1 }} className="text-[var(--accent)]">
-                  Shah
+                <span className="line">
+                  <span data-line style={{ ["--i" as string]: 1 }} className="text-[var(--accent)]">
+                    Shah
+                  </span>
                 </span>
-              </span>
-            </h1>
-          </div>
+              </h1>
+            </div>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-            <div className="md:col-span-6" data-load style={{ ["--d" as string]: "360ms" }}>
+            <div className="flex flex-col gap-6" data-load style={{ ["--d" as string]: "360ms" }}>
+              <p className="t-lead text-[var(--ink)]">
+                17 years transforming Home Healthcare, Rehabilitation, and Assisted Aid Technology across the globe.
+              </p>
               <p className="t-body text-[var(--muted)]">
                 Founder @{" "}
                 <a
@@ -224,17 +227,7 @@ export default function PortfolioPage() {
                 </a>{" "}
                 · General Manager @ Neoshine Healthcare · Driving Business Strategy and Development in Dubai, United Arab Emirates.
               </p>
-            </div>
-
-            <div
-              className="md:col-span-6 flex flex-col md:items-end justify-end gap-5"
-              data-load
-              style={{ ["--d" as string]: "460ms" }}
-            >
-              <p className="t-body text-[var(--ink)] md:text-right">
-                17 years transforming Home Healthcare, Rehabilitation, and Assisted Aid Technology across the globe.
-              </p>
-              <div className="flex flex-wrap items-center gap-6">
+              <div className="flex flex-wrap items-center gap-6 pt-2">
                 <a href="#contact" className="btn-primary">
                   Get in touch
                 </a>
@@ -249,9 +242,34 @@ export default function PortfolioPage() {
               </div>
             </div>
           </div>
+
+          <figure
+            className="md:col-span-5 bg-[var(--surface)] overflow-clip flex flex-col"
+            data-load
+            style={{ ["--d" as string]: "260ms" }}
+          >
+            <div className="overflow-clip aspect-square w-full bg-[var(--surface-alt)]">
+              <img
+                src="/profile.jpg"
+                alt="Pragnesh Shah — Founder of Sehaaonline and General Manager at Neoshine Healthcare"
+                width={1024}
+                height={1024}
+                fetchPriority="high"
+                className="w-full h-full object-cover object-top photo-drift"
+              />
+            </div>
+            <figcaption className="px-6 py-4 flex items-center justify-between gap-4 bg-[var(--surface)]">
+              <span className="t-small text-[var(--ink)]">
+                Pragnesh Shah
+              </span>
+              <span className="t-small text-[var(--accent)]">
+                Dubai, UAE
+              </span>
+            </figcaption>
+          </figure>
         </section>
 
-        {/* SECTION 1: INTRO — Title, note, facts row + Portrait Placeholder Frame */}
+        {/* SECTION 1: INTRO — Title, note, facts row + Architectural Atmosphere */}
         <section
           aria-labelledby="heading-intro"
           className="bg-[var(--surface)] page-pad py-20 md:py-32"
@@ -297,42 +315,16 @@ export default function PortfolioPage() {
             </div>
           </div>
 
-          {/* Executive Portrait + Architectural Atmosphere Split */}
-          <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-            <figure
-              className="md:col-span-5 bg-[var(--bg)] flex flex-col justify-between overflow-clip"
-              data-reveal
-            >
-              <div className="overflow-clip aspect-square w-full bg-[var(--surface-alt)]">
-                <img
-                  src="/profile.jpg"
-                  alt="Pragnesh Shah — Founder of Sehaaonline and General Manager at Neoshine Healthcare"
-                  width={1024}
-                  height={1024}
-                  fetchPriority="high"
-                  className="w-full h-full object-cover object-top photo-drift"
-                />
-              </div>
-              <figcaption className="p-6 md:p-8 flex flex-col gap-1">
-                <p className="t-lead text-[var(--ink)]">
-                  Pragnesh Shah
-                </p>
-                <p className="t-small text-[var(--muted)]">
-                  Founder @ sehaaonline.com · General Manager @ Neoshine Healthcare
-                </p>
-              </figcaption>
-            </figure>
-
-            <div className="md:col-span-7 overflow-clip bg-[var(--bg)]" data-reveal style={{ ["--delay" as string]: "100ms" }}>
-              <img
-                src="https://picsum.photos/id/887/1600/1000?grayscale"
-                alt="Architectural lines representing structured regional healthcare infrastructure"
-                width={1600}
-                height={1000}
-                loading="lazy"
-                className="w-full h-full object-cover photo-drift"
-              />
-            </div>
+          {/* Architectural Atmosphere Band */}
+          <div className="mt-16 md:mt-20 overflow-clip bg-[var(--bg)]" data-reveal>
+            <img
+              src="https://picsum.photos/id/887/1800/800?grayscale"
+              alt="Architectural lines representing structured regional healthcare infrastructure"
+              width={1800}
+              height={800}
+              loading="lazy"
+              className="w-full h-[280px] md:h-[420px] object-cover photo-drift"
+            />
           </div>
         </section>
 
